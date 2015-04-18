@@ -19,6 +19,7 @@ subjecttest=read.csv("test/subject_test.txt", col.names=c("subject"), header=FAL
 xall = rbind(xtrain, xtest) 
 yall = rbind(ytrain, ytest)
 subjectall = rbind(subjecttrain, subjecttest)
+#as the extraction simplifies the data set I decided to merge test and train without adding them the subject and the activity
 #2 Extracts only the measurements on the mean and standard deviation for each measurement. 
 
 features=read.csv("features.txt", header=FALSE, sep="")
@@ -37,6 +38,7 @@ xallExtract$activity = yall$activity
 xallExtract$subject = subjectall$subject
 #4 Appropriately labels the data set with descriptive variable names. 
 
+#as features have labels containing the characters ()- I suppress them using the gsub function.
 names(xallExtract) = c(gsub("[-\\(\\)\\,]","",grep("mean\\(\\)|std\\(\\)",features$feature,value=TRUE)),"activity","subject")
 #5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 

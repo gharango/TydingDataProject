@@ -1,3 +1,9 @@
+# this R file runs only in 3.1.3+ it uses = as assigment operator instead of <-
+
+# getting date from zip file in the working directory
+unzip("getdata_projectfiles_UCI HAR Dataset.zip")
+# setting the working directory 
+setwd("UCI HAR Dataset")
 
 #1 Merges the training and the test sets to create one data set.
 
@@ -18,7 +24,7 @@ subjectall = rbind(subjecttrain, subjecttest)
 features=read.csv("features.txt", header=FALSE, sep="")
 names(features)=c("id","feature")
 
-vectExtract <-grep("mean\\(\\)|std\\(\\)",features$feature)
+vectExtract = grep("mean\\(\\)|std\\(\\)",features$feature)
 
 library("dplyr")
 xallExtract = select(xall, one_of(paste0("V",as.character(vectExtract))))
@@ -34,6 +40,6 @@ xallExtract$subject = subjectall$subject
 names(xallExtract) = c(gsub("[-\\(\\)\\,]","",grep("mean\\(\\)|std\\(\\)",features$feature,value=TRUE)),"activity","subject")
 #5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-tidySet <- summarise_each(group_by(xallExtract, activity,subject),funs(mean), vars=-c(activity,subject))
+tidySet = summarise_each(group_by(xallExtract, activity,subject),funs(mean), vars=-c(activity,subject))
 write.table(tidySet, file="tidyset.txt", row.name=FALSE)
   

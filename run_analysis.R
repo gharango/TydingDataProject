@@ -1,4 +1,5 @@
 # this R file runs only in 3.1.3+ it uses = as assigment operator instead of <-
+# this R file runs only in 3.1.3+ it uses = as assigment operator instead of <-
 
 # getting date from zip file in the working directory
 unzip("getdata_projectfiles_UCI HAR Dataset.zip")
@@ -43,5 +44,7 @@ names(xallExtract) = c(gsub("[-\\(\\)\\,]","",grep("mean\\(\\)|std\\(\\)",featur
 #5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 tidySet = summarise_each(group_by(xallExtract, activity,subject),funs(mean), vars=-c(activity,subject))
+# change the names of tidy set to reflect mean computation
+names(tidySet)[3:length(tidySet)] = paste(names(tidySet)[3:length(tidySet)],"mean", sep=".")
 write.table(tidySet, file="tidyset.txt", row.name=FALSE)
   

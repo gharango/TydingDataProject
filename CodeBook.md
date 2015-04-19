@@ -3,6 +3,7 @@
 ##The original data set information is splitted into several files they were produced by:
 >=======================================
 >Human Activity Recognition Using Smartphones Dataset
+>
 >Version 1.0
 >
 >======================================
@@ -14,6 +15,7 @@
 >#www.smartlab.ws
 >
 >======================================
+
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
 
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.

@@ -191,7 +191,7 @@ The data set resulting names for the 68 features are:
     activity,                subject
 
 ##Operations to create the tidy data set
-###A tidy data set is made of a group by on activity and subject features and for this grouping the meaning of all other features is computed.
+###A tidy data set is made of a group by on activity and subject features and for this grouping the average of all other variables is computed.
 
 The names of the tidy set features are changed to reflect the average computation. The data set names are:
 

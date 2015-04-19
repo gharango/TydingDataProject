@@ -1,4 +1,5 @@
-Code Book
+    Code Book
+
 The original data set information is splitted into several files they belong to
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
@@ -31,7 +32,7 @@ The files used to generate the tidy data set result were:
 - 'train/subject_train.txt' and 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. activities range is from 1 to 30. 
 
 The initial list of variables is (separated by ';' because some names contain ','):
-
+<code>
 tBodyAcc-mean()-X; tBodyAcc-mean()-Y; tBodyAcc-mean()-Z; tBodyAcc-std()-X; tBodyAcc-std()-Y; tBodyAcc-std()-Z;
 tBodyAcc-mad()-X; tBodyAcc-mad()-Y; tBodyAcc-mad()-Z; tBodyAcc-max()-X; tBodyAcc-max()-Y; tBodyAcc-max()-Z;
 tBodyAcc-min()-X; tBodyAcc-min()-Y; tBodyAcc-min()-Z; tBodyAcc-sma(); tBodyAcc-energy()-X; tBodyAcc-energy()-Y;
@@ -126,7 +127,7 @@ fBodyBodyGyroMag-kurtosis(); fBodyBodyGyroJerkMag-mean(); fBodyBodyGyroJerkMag-s
 fBodyBodyGyroJerkMag-sma(); fBodyBodyGyroJerkMag-energy(); fBodyBodyGyroJerkMag-iqr();fBodyBodyGyroJerkMag-entropy(); fBodyBodyGyroJerkMag-maxInds; fBodyBodyGyroJerkMag-meanFreq();
 fBodyBodyGyroJerkMag-skewness(); fBodyBodyGyroJerkMag-kurtosis(); angle(tBodyAccMean,gravity);angle(tBodyAccJerkMean),gravityMean); angle(tBodyGyroMean,gravityMean); angle(tBodyGyroJerkMean,gravityMean);
 angle(X,gravityMean); angle(Y,gravityMean); angle(Z,gravityMean)
-
+</code>
 
 The data set rows are appended x_train with x_test, subject_train with  subject_test and y_train with y_test.
 Only the features containing mean and standard deviation computations are retained, this 66 features instead of 561.

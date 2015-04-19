@@ -16,3 +16,5 @@ The data for the project has been downloaded into the current directory from:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 the file downloaded is "getdata_projectfiles_UCI HAR Dataset.zip"
+
+The file CodeBook.md describes the original variables/features, the resulting variables for the first extracted data set and the second extracted data set which will be writen as the result of the execution of run_analysis.R

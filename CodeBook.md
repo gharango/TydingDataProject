@@ -1,17 +1,20 @@
+Code Book
 The original data set information is splitted into several files they belong to
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
-Version 1.0
+ Version 1.0
 ==================================================================
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
-www.smartlab.ws
+ www.smartlab.ws
 ==================================================================
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+
 The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The files used to generate the tidy data set result were:
@@ -28,6 +31,7 @@ The files used to generate the tidy data set result were:
 - 'train/subject_train.txt' and 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. activities range is from 1 to 30. 
 
 The initial list of variables is (separated by ';' because some names contain ','):
+
 tBodyAcc-mean()-X; tBodyAcc-mean()-Y; tBodyAcc-mean()-Z; tBodyAcc-std()-X; tBodyAcc-std()-Y; tBodyAcc-std()-Z;
 tBodyAcc-mad()-X; tBodyAcc-mad()-Y; tBodyAcc-mad()-Z; tBodyAcc-max()-X; tBodyAcc-max()-Y; tBodyAcc-max()-Z;
 tBodyAcc-min()-X; tBodyAcc-min()-Y; tBodyAcc-min()-Z; tBodyAcc-sma(); tBodyAcc-energy()-X; tBodyAcc-energy()-Y;
@@ -150,11 +154,14 @@ fBodyGyro-std()-Z;          fBodyAccMag-mean();         fBodyAccMag-std();
 fBodyBodyAccJerkMag-mean(); fBodyBodyAccJerkMag-std();  fBodyBodyGyroMag-mean();   
 fBodyBodyGyroMag-std();     fBodyBodyGyroJerkMag-mean();fBodyBodyGyroJerkMag-std()
 
-subject data set is added as the feature "subject" to the data set extraction
-the activity values (range 1:6) on the y data set are replaced by their corresponding labels and added as the activity feature to the extracted data set
+The subject data set is added as the feature "subject" to the data set extraction.
 
-To have names with only alphanumeric characters, symbols '-','(',and ')' are deleted: 
+The activity values (range 1:6) on the y data set are replaced by their corresponding labels and added as the activity feature to the extracted data set.
+
+To have names with only alphanumeric characters, symbols '-','(',and ')' are deleted.
+
 The data set resulting names for the 68 features are:
+
 tBodyAccmeanX,           tBodyAccmeanY,           tBodyAccmeanZ,          
 tBodyAccstdX,            tBodyAccstdY,            tBodyAccstdZ,           
 tGravityAccmeanX,        tGravityAccmeanY,        tGravityAccmeanZ,       
@@ -179,7 +186,8 @@ fBodyBodyAccJerkMagmean, fBodyBodyAccJerkMagstd,  fBodyBodyGyroMagmean,
 fBodyBodyGyroMagstd,     fBodyBodyGyroJerkMagmean,fBodyBodyGyroJerkMagstd,
 activity,                subject
 
-A tidy data set is made of a group by on activity and subject features and for this grouping the meaning of all other features is computed
+A tidy data set is made of a group by on activity and subject features and for this grouping the meaning of all other features is computed.
+
 The names of the tidy set features are changed to reflect the average computation. The data set names are
 
 activity,                subject,
